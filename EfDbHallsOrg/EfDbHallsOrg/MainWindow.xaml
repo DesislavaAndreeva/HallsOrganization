@@ -1,0 +1,32 @@
+﻿<Page x:Class="EfDbHallsOrg.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EfDbHallsOrg"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="0,0,-26,0">
+        <Button Content="Export to PDF" HorizontalAlignment="Left" Margin="207,322,0,0" VerticalAlignment="Top" Width="87" Height="30"  Name="pdf" Click="Button_Click_Generate_Pdf_File"/>
+        <Button Name="chedules" Content="Update schedule" HorizontalAlignment="Left" Margin="217,398,0,0" VerticalAlignment="Top" Width="96" Click="schedulesNavigate" Height="29" RenderTransformOrigin="0.207,0.517"/>
+        <Button Name="teachers" Content="Teachers info" HorizontalAlignment="Left" Margin="119,398,0,0" VerticalAlignment="Top" Width="93" Click="teachersNavigate" Height="29"/>
+        <Button Name="halls" Content="Halls Info" HorizontalAlignment="Left" Margin="29,398,0,0" VerticalAlignment="Top" Width="85" Click="hallsNavigate" Height="29"/>
+        <Label Content="Halls info:" HorizontalAlignment="Left" Margin="47,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Select hall:" HorizontalAlignment="Left" Margin="55,34,0,0" VerticalAlignment="Top"/>
+        <DataGrid Name="resultGrid" HorizontalAlignment="Left" Height="386" Margin="318,41,0,0" VerticalAlignment="Top" Width="477"/>
+        <Label Content="Results:" HorizontalAlignment="Left" Margin="318,15,0,0" VerticalAlignment="Top"/>
+        <Label Content="Enter EGN:" HorizontalAlignment="Left" Margin="52,60,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="hall_box" HorizontalAlignment="Left" Margin="126,36,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Check Schedules" HorizontalAlignment="Left" Margin="145,159,0,0" VerticalAlignment="Top" Width="101" Height="30" RenderTransformOrigin="0.989,0.167" Click="Button_Click_Search_Results"/>
+        <Button Content="Backup DB" HorizontalAlignment="Left" Margin="29,366,0,0" VerticalAlignment="Top" Width="85" Height="27" Click="Button_Click_BackupDB"/>
+        <Button Content="Restore DB" HorizontalAlignment="Left" Margin="119,366,0,0" VerticalAlignment="Top" Width="93" Height="27" Click="Button_Click_RestoreDB"/>
+        <TextBox Name="egn_box" HorizontalAlignment="Left" Height="23" Margin="126,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Show Halls" HorizontalAlignment="Left" Margin="47,220,0,0" VerticalAlignment="Top" Width="101" Click="Button_Click" Height="29"/>
+        <Button Content="Show Teachers" HorizontalAlignment="Left" Margin="153,220,0,0" VerticalAlignment="Top" Width="101" Click="Button_Click_1" Height="31"/>
+        <TextBox Name="pdf_file_name" HorizontalAlignment="Left" Height="30" Margin="29,322,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="173"/>
+        <CheckBox Name="oderByDate" Content="Order by date" HorizontalAlignment="Left" Margin="126,96,0,0" VerticalAlignment="Top"/>
+        <Label Content="Export the database to pdf file:" HorizontalAlignment="Left" Margin="29,291,0,0" VerticalAlignment="Top"/>
+        <DatePicker Name="date_box" HorizontalAlignment="Left" Margin="182,121,0,0" VerticalAlignment="Top" Height="33" Width="107"/>
+        <Label Content="Select a date to check the count&#xD;&#xA; of schedules for teacher/hall:" HorizontalAlignment="Left" Margin="0,111,0,0" VerticalAlignment="Top" Width="182" Height="64"/>
+    </Grid>
+</Page>
